@@ -116,6 +116,12 @@ body {
   }
 }
 
+@media (max-height: 415px) {
+  .updateButton {
+    display: none;
+  }
+}
+
 @media (max-width: 750px) {
   .updateButton {
     font-size: .9em;
