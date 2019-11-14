@@ -188,7 +188,10 @@ body {
 
 .input-container{
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    @include laptop{
+        grid-template-columns: 1fr 1fr;
+    }
     input{
         padding:.5em 1em;
         background-color:rgba(240, 232, 232,0.5);
