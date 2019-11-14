@@ -140,10 +140,18 @@ body {
     color:rgb(235, 236, 236);
     display:inline-block;
     position:absolute;
-    top:70%;
-    left:50%;
-    transform: translateY(-50%);
-    transform: transLateX(-50%);
+    bottom:0;
+    transition: .2s;
+    @include mini-laptop{
+        font-size: .9em;
+    }
+    @include tablet{
+        font-size: .7em;
+    }
+    @include mobile{
+        font-size: .5em;
+    }
+
     &:hover{
         background-color: rgb(212, 212, 212);
         color:black;
@@ -157,12 +165,9 @@ body {
         font-size: .9em;
     }
     @include tablet{
-        top:60%;
-    
         font-size: .7em;
     }
     @include mobile{
-        
         font-size: .5em;
     }
 
@@ -174,6 +179,12 @@ body {
     text-align: center;
     color:pink;
     margin: 3em 0 0 0;
+    transition: .5s;
+    cursor: pointer;
+    &:hover{
+        color:rgb(71, 235, 247);
+    }
+
     @include mini-laptop{
         font-size: 2;
     }
@@ -189,6 +200,8 @@ body {
 .input-container{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    transition: 1s;
+
     @include laptop{
         grid-template-columns: 1fr 1fr;
     }
@@ -197,7 +210,9 @@ body {
         background-color:rgba(240, 232, 232,0.5);
         border:none;
         border-right:1px solid rgba(207, 109, 109,0.5);
-        
+        @include laptop{
+            font-size:.7em;
+        }
        
     }
     button{
@@ -206,11 +221,17 @@ body {
         background-color:rgba(240, 232, 232,0.3);
         color:white;
         cursor: pointer;
+        transition: .5s;
+        @include laptop{
+            font-size:.7em;
+        }
         &:hover{
             background-color:rgba(240, 232, 232,0.4);
         }
     }
 }
+
+
 
 ::placeholder{
     color:rgba(34, 34, 34,0.7);

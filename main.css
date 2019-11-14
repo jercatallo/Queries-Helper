@@ -104,12 +104,27 @@ body {
   color: #ebecec;
   display: inline-block;
   position: absolute;
-  top: 70%;
-  left: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transform: transLateX(-50%);
-          transform: transLateX(-50%);
+  bottom: 0;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+@media (max-width: 750px) {
+  .updateButton {
+    font-size: .9em;
+  }
+}
+
+@media (max-width: 560px) {
+  .updateButton {
+    font-size: .7em;
+  }
+}
+
+@media (max-width: 400px) {
+  .updateButton {
+    font-size: .5em;
+  }
 }
 
 .updateButton:hover {
@@ -129,7 +144,6 @@ body {
 
 @media (max-width: 560px) {
   .updateButton {
-    top: 60%;
     font-size: .7em;
   }
 }
@@ -145,6 +159,13 @@ body {
   text-align: center;
   color: pink;
   margin: 3em 0 0 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.section-heading:hover {
+  color: #47ebf7;
 }
 
 @media (max-width: 750px) {
@@ -170,6 +191,8 @@ body {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 @media (max-width: 950px) {
@@ -186,12 +209,26 @@ body {
   border-right: 1px solid rgba(207, 109, 109, 0.5);
 }
 
+@media (max-width: 950px) {
+  .input-container input {
+    font-size: .7em;
+  }
+}
+
 .input-container button {
   padding: .5em 1em;
   border: none;
   background-color: rgba(240, 232, 232, 0.3);
   color: white;
   cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+@media (max-width: 950px) {
+  .input-container button {
+    font-size: .7em;
+  }
 }
 
 .input-container button:hover {

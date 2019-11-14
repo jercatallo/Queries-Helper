@@ -9,21 +9,21 @@
     <link rel="icon" href="/images/logo.jpg">
 
 </head>
-<body onresize="getWidthHeight()">
+<body onresize="getWidthHeight()" >
 
 
     <audio src="sincewerealone.mp3" autoplay id="music"></audio>
-
-    <div class="input-container">
+  
+    <div class="input-container" id="input-container" >
             <input type="text" id="site-link" name="site-link" placeholder="Input site src">
         <input type="number" id="input-width" name="input-width" placeholder="Input Width">
         <input type="number" id="input-height" name="input-height" placeholder="Input Height">
          <button onclick="openWin()">New Device</button>
     </div>
- 
 
 
-    <h1 class="section-heading">Helping with your Media Queries</h1>
+
+    <h1 class="section-heading" onclick="appear()">Helping with your Media Queries</h1>
     <div class="measurement-container">
         <p class="container1">Your Screen Height is: <span id="screen-height"></span></p>
         <p class="container2">Your Screen Width is: <span id="screen-width"></span></p>
@@ -32,7 +32,7 @@
     </div>
     
 
-    <button onclick="getWidthHeight(),changeMeasurement()" class="updateButton">Update</button>
+    <button onclick="getWidthHeight(),changeMeasurement()" onmouseover="disAppear()" class="updateButton">Update</button>
     <script src="app.js"></script>
 </body>
 </html>

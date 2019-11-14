@@ -3,8 +3,16 @@
     document.getElementById("screen-height").innerHTML = screen.height;
     document.getElementById("browser-width").innerHTML = window.innerWidth;
     document.getElementById("browser-height").innerHTML = window.innerHeight;
+    document.getElementById("input-container").style.opacity = "0";
 })();
 
+function appear(){
+    document.getElementById("input-container").style.opacity = "1";
+}
+
+function disAppear(){
+    document.getElementById("input-container").style.opacity = "0";
+}
 
 function getWidthHeight() {
     document.getElementById("screen-width").innerHTML = screen.width;
