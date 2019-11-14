@@ -1,0 +1,214 @@
+//variables
+
+// BREAKPOINTS
+$breakpoint-desktop:1200px;
+$breakpoint-laptop:950px;
+$breakpoint-mini-laptop:750px;
+$breakpoint-tablet:560px;
+$breakpoint-mobile:400px;
+
+//mixins
+@mixin desktop{
+    @media (max-width:#{$breakpoint-desktop}){
+        @content;
+    }
+}
+
+@mixin laptop{
+    @media (max-width:#{$breakpoint-laptop}){
+        @content;
+    }
+}
+
+@mixin mini-laptop{
+    @media (max-width:#{$breakpoint-mini-laptop}){
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media (max-width:#{$breakpoint-tablet}){
+        @content;
+    }
+}
+
+@mixin mobile{
+    @media (max-width:#{$breakpoint-mobile}){
+        @content;
+    }
+}
+
+
+body {
+    margin:0;
+    padding:0;
+    font-family: 'Roboto';
+    background-image: linear-gradient(rgba(73, 72, 72, .5),rgba(73, 72, 72, .5)),url(/images/silhouettes_hugs.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.body2{
+    background-image: linear-gradient(rgba(73, 72, 72, .5),rgba(73, 72, 72, .5)),url(/images/couple_sea_sunset.jpg);
+}
+
+#screen-width, #screen-height {
+    color:rgb(49, 49, 49);
+    font-weight: bold;
+}
+
+.measurement-container{
+    @include mini-laptop{
+        font-size: .8em;
+    }
+    @include tablet{
+        font-size: .7em;
+    }
+    @include mobile{
+        font-size: .6em;
+    }
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width:80%;
+    margin:5em auto;
+    grid-gap: 3em;
+    //transform: translate(-50%,-50%);
+    .container1 {
+        padding:15px;
+        background-color:rgba(226, 81, 81, 0.3);
+        color:rgb(250, 250, 250);
+        display:inline-block;
+        border-radius: 2px;
+        &:hover{
+            background-color: rgba(224, 66, 66, 0.8);
+        }
+    
+    }
+    
+    .container2 {
+        padding:15px;
+        background-color:rgba(226, 81, 81, 0.3);
+        color:rgb(250, 250, 250);
+        display:inline-block;
+        border-radius: 2px;
+
+        &:hover{
+            background-color: rgba(224, 66, 66, 0.8);
+        }
+    
+    }   
+    
+    .container3 {
+        padding:15px;
+        background-color:rgba(226, 81, 81, 0.3);
+        color:rgb(250, 250, 250);
+        display:inline-block;
+        border-radius: 2px;
+
+        &:hover{
+            background-color: rgba(224, 66, 66, 0.8);
+        }
+    
+    }
+    
+    .container4 {
+        padding:15px;
+        background-color:rgba(226, 81, 81, 0.3);
+        color:rgb(250, 250, 250);
+        display:inline-block;
+        border-radius: 2px;
+
+        &:hover{
+            background-color: rgba(224, 66, 66, 0.8);
+        }
+    
+    }   
+    
+}
+
+
+
+.updateButton {
+    padding:1em 5em;
+    cursor: pointer;
+    font-weight:bold;
+    border:none;
+    background-color:rgb(75, 77, 78);
+    border:1px solid white;
+    color:rgb(235, 236, 236);
+    display:inline-block;
+    position:absolute;
+    top:70%;
+    left:50%;
+    transform: translateY(-50%);
+    transform: transLateX(-50%);
+    &:hover{
+        background-color: rgb(212, 212, 212);
+        color:black;
+    }
+
+
+    &:active{
+        background-color: rgb(185, 184, 184);
+    }
+    @include mini-laptop{
+        font-size: .9em;
+    }
+    @include tablet{
+        top:60%;
+    
+        font-size: .7em;
+    }
+    @include mobile{
+        
+        font-size: .5em;
+    }
+
+
+}
+
+.section-heading{
+    font-family: 'Roboto Thin';
+    text-align: center;
+    color:pink;
+    margin: 3em 0 0 0;
+    @include mini-laptop{
+        font-size: 2;
+    }
+    @include tablet{
+        font-size: 1.5em;
+    }
+    @include mobile{
+        font-size: 1.2em;
+    }
+}
+
+
+.input-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    input{
+        padding:.5em 1em;
+        background-color:rgba(240, 232, 232,0.5);
+        border:none;
+        border-right:1px solid rgba(207, 109, 109,0.5);
+        
+       
+    }
+    button{
+        padding:.5em 1em;
+        border:none;
+        background-color:rgba(240, 232, 232,0.3);
+        color:white;
+        cursor: pointer;
+        &:hover{
+            background-color:rgba(240, 232, 232,0.4);
+        }
+    }
+}
+
+::placeholder{
+    color:rgba(34, 34, 34,0.7);
+}
