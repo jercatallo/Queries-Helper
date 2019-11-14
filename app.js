@@ -16,8 +16,10 @@ function getWidthHeight() {
 
 var secondWindow;
 
+
 function openWin() {
-    secondWindow = window.open("index2.html", "", "width=150, height=150");
+    var siteSource = document.getElementById("site-link").value;
+    secondWindow = window.open(siteSource, "", "width=150, height=150");
 }
 
 function changeMeasurement() {
