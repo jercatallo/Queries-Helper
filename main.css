@@ -104,9 +104,16 @@ body {
   color: #ebecec;
   display: inline-block;
   position: absolute;
+  min-height: 3.5em;
   bottom: 0;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+@media (max-height: 425px) {
+  .updateButton {
+    opacity: 0;
+  }
 }
 
 @media (max-width: 750px) {

@@ -6,8 +6,15 @@ $breakpoint-laptop:950px;
 $breakpoint-mini-laptop:750px;
 $breakpoint-tablet:560px;
 $breakpoint-mobile:400px;
+$breakpoint-height:425px;
 
 //mixins
+@mixin height{
+    @media (max-height:#{$breakpoint-height}){
+        @content;
+    }
+}
+
 @mixin desktop{
     @media (max-width:#{$breakpoint-desktop}){
         @content;
@@ -140,8 +147,13 @@ body {
     color:rgb(235, 236, 236);
     display:inline-block;
     position:absolute;
+    min-height: 3.5em;
     bottom:0;
-    transition: .2s;
+    transition: .3s;
+    @include height{
+        opacity:0;
+    }
+
     @include mini-laptop{
         font-size: .9em;
     }
